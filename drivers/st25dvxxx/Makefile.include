@@ -1,0 +1,8 @@
+PSEUDOMODULES += st25dv%
+PSEUDOMODULES += mtd_st25dvxxx
+
+# handle at24cxxx being a distinct module
+NO_PSEUDOMODULES += st25dvxxx
+
+USEMODULE_INCLUDES_st25dvxxx := $(LAST_MAKEFILEDIR)/include
+USEMODULE_INCLUDES += $(USEMODULE_INCLUDES_st25dvxxx)
